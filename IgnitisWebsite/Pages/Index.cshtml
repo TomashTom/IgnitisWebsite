@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Ignitis Testinė Užduotis";
+}
+
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="/css/start_style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <svg viewBox="0 0 24 24">
+                <rect fill="#0044cc" x="2" y="2" width="6" height="6" />
+                <rect fill="#0044cc" x="10" y="2" width="6" height="6" />
+                <rect fill="#0044cc" x="2" y="10" width="6" height="6" />
+                <rect fill="#0044cc" x="10" y="10" width="6" height="6" />
+            </svg>
+            <span>Ignitis testinė užduotis</span>
+        </div>
+        <div class="header-right">
+            <a href="#" class="search-icon">
+                <svg viewBox="0 0 24 24">
+                    <path fill="#666" d="M15.5 14h-.79l-.28-.27c1.19-1.39 1.89-3.19 1.89-5.13 0-4.41-3.59-8-8-8s-8 3.59-8 8 3.59 8 8 8c1.94 0 3.74-.7 5.13-1.89l.27.28v.79l5 5 1.49-1.49-5-5zm-6.5 0c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z" />
+                </svg>
+            </a>
+            <a href="#" class="signin">Sign in</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="preview-container">
+            <a href="Details">
+                <img src="/images/picture.png" alt="Newsletter Preview">
+            </a>
+            <p class="preview-caption">Mėnesinis naujienlaiškis 2024 balandis - be rinkos</p>
+        </div>
+    </div>
+</body>
+</html>
