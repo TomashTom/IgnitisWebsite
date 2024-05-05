@@ -1,4 +1,4 @@
-﻿@page
+﻿@* @page
 @model IndexModel
 @{
     ViewData["Title"] = "Ignitis - Testinė Užduotis";
@@ -13,6 +13,29 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+    <div class="sidebar">
+    <div class="comments-section">
+        <textarea placeholder="Make a comment" class="comment-box"></textarea>
+        <div class="comment-buttons">
+            <button class="cancel-button" onclick="toggleComments()">Cancel</button>
+            <button class="submit-button">Submit</button>
+        </div>
+        <div class="no-comments">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 0C5.373 0 0 4.922 0 11s5.373 11 12 11c1.25 0 2.459-.172 3.615-.505.108-.03.22-.048.336-.048a3.7 3.7 0 0 1 2.578 1.055c.87.87 2.366.87 3.237 0 .871-.871.871-2.366 0-3.237a3.7 3.7 0 0 1-1.055-2.578c0-.116.018-.228.048-.336C19.828 14.459 20 13.25 20 12c0-6.078-5.373-11-12-11z" />
+            </svg>
+            <p>No comments—yet</p>
+            <p>Give feedback, ask questions, or start a discussion in the comments.</p>
+        </div>
+    </div>
+
+    <div class="comment-icon" onclick="toggleComments()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M12 22c-1.1 0-2-.9-2-2H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2h-5.5l-4.29 4.29c-.39.39-.9.58-1.41.58zm7-14H5v2h14v-2zm0 4H5v2h14v-2zm0 4H5v2h9v-2z" />
+        </svg>
+    </div>
+    </div>
     <div class="container_1">
         <div class="container">
             <header class="header">
@@ -65,6 +88,134 @@
         <p class="footer-text">Jei informacija Jums neaktuali, galite jos atsisakyti.</p>
         
     </div>
+    <
   
 </body>
 </html>
+<script>
+    function toggleComments() {
+        const commentsSection = document.querySelector(".comments-section");
+        commentsSection.style.display = commentsSection.style.display === "block" ? "none" : "block";
+    }
+</script> *@
+
+            @page
+@model IndexModel
+@{
+    ViewData["Title"] = "Ignitis - Testinė Užduotis";
+}
+
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js"></script>
+</head>
+<body>
+    <div class="container_1">
+        <div class="container">
+            <header class="header">
+                <img src="/images/ignitislogo.png" alt="Ignitis" class="logo">
+            </header>
+
+            <div class="content">
+                <section class="article">
+                    <img src="/images/Kauno-HE.png" alt="Kauno Hidroelektrinė" class="article-img">
+                    <h2>6 įdomybės apie vieną didžiausių žaliųjų elektrinių Lietuvoje</h2>
+                    <p>Kauno hidroelektrinė – viena didžiausių žaliąją energiją gaminanti elektrinė Lietuvoje. Kviečiame susipažinti su ja artimiau ir sužinoti, kaip ji prisideda prie švaresnės elektros gamybos, kodėl nepatartina pėsčiomis eiti aplink marias ir kokia stichija sunaikino du Kauno tiltus.</p>
+                    <a href="#" class="button">Sužinoti daugiau</a>
+                </section>
+
+                <section class="article">
+                    <img src="/images/savitarnos-iraso-baneris.png" alt="Man Working" class="article-img">
+                    <h2>5 dalykai, kurių nebandė šioje svetainėje</h2>
+                    <p>Nežinome, ar patikėsite, bet yra svetainė, kurioje galite ne tik atsiskaityti su net 300 įvairių tiekėjų vos viena sąskaita, padengti savo močiutės komunalinių paslaugų sąskaitą ar paanalizuoti savo vartojimo įpročius, o tada juos</p>
+                    <a href="#" class="button">Skaityti toliau</a>
+                </section>
+
+                <section class="article">
+                    <img src="/images/elektromobiliu-abc.png" alt="Electric Cars" class="article-img">
+                    <h2>Svajojate apie elektromobilį? Dalinamės elektromobilių ABC!</h2>
+                    <p>Jei jau vairuojate elektromobilį – sveikiname! Jei dar tik ketinate jį įsigyti – drąsiname ir dalinamės „Ignitis ON“ parengta elektromobilių abėcėle:</p>
+                    <ul class="styled-list">
+                        <li><span> Elektromobilių duomenų bazė</span></li>
+                        <li><span> Kaip įkrauti elektromobilį?</span></li>
+                        <li><span> Įkrovimo jungtys</span></li>
+                        <li><span> Įkrovimo stotelių žemėlapis</span></li>
+                        <li><span> ...ir dar daugiau</span></li>
+                    </ul>
+                </section>
+            </div>
+
+            <footer class="comments">
+                <p>Ačiū, kad esate su mumis</p>
+                <p>Jūsų „Ignitis“ komanda</p>
+                <div class="social-icons">
+                    <a href="#"><img src="/images/icons8-facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="/images/icons8-youtube.svg" alt="YouTube"></a>
+                    <a href="#"><img src="/images/icons8-linkedin.svg" alt="LinkedIn"></a>
+                </div>
+            </footer>
+
+            
+        </div>
+        <div class="footer-text">
+            Šį laišką gavote, nes sutikote gauti informaciją apie UAB „Ignitis“ paslaugas bei pasiūlymus.
+            Jei informacija Jums neaktuali, galite jos atsisakyti.
+        </div>
+    </div>
+
+    <div class="icon-bar">
+        <div class="icon" onclick="toggleComments()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 22c-1.1 0-2-.9-2-2H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2h-5.5l-4.29 4.29c-.39.39-.9.58-1.41.58zm7-14H5v2h14v-2zm0 4H5v2h14v-2zm0 4H5v2h9v-2z" />
+            </svg>
+        </div>
+
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M17 3H7c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM7 17V5h10v12H7zm2-9h6v2H9V8zm0 4h4v2H9v-2z" />
+            </svg>
+        </div>
+
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M6.35 19.65l1.79-1.79a.5.5 0 0 0 0-.71L4.21 14H13c1.85 0 3.34 1.28 3.77 3h2.05c-.49-2.55-2.68-4.5-5.32-4.5H4.21l3.93-3.93a.5.5 0 0 0 0-.71L6.35 3.35a.5.5 0 0 0-.71 0l-5 5a.5.5 0 0 0 0 .71l5 5c.19.2.51.2.71 0zM17.5 8h-2V6h-2v2h-2V6h-2v2H8v2h2v2H8v2h2v2h2v-2h2v2h2v-2h2v-2h-2v-2h2V8z" />
+            </svg>
+        </div>
+    </div>
+    <div class="comments-section">
+        <textarea placeholder="Make a comment" class="comment-box"></textarea>
+        <div class="comment-buttons">
+            <button class="cancel-button" onclick="toggleComments()">Cancel</button>
+            <button class="submit-button">Submit</button>
+        </div>
+        <div class="no-comments">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 0C5.373 0 0 4.922 0 11s5.373 11 12 11c1.25 0 2.459-.172 3.615-.505.108-.03.22-.048.336-.048a3.7 3.7 0 0 1 2.578 1.055c.87.87 2.366.87 3.237 0 .871-.871.871-2.366 0-3.237a3.7 3.7 0 0 1-1.055-2.578c0-.116.018-.228.048-.336C19.828 14.459 20 13.25 20 12c0-6.078-5.373-11-12-11z" />
+            </svg>
+            <p>No comments—yet</p>
+            <p>Give feedback, ask questions, or start a discussion in the comments.</p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function toggleBlockPosition() {
+        const previewBlock = document.getElementById("preview-block");
+        if (previewBlock.classList.contains("right-align")) {
+            previewBlock.classList.remove("right-align", "small");
+            previewBlock.classList.add("left-align", "large");
+        } else {
+            previewBlock.classList.remove("left-align", "large");
+            previewBlock.classList.add("right-align", "small");
+        }
+    }
+
+</script>

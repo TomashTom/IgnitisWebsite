@@ -1,4 +1,4 @@
-﻿@page
+﻿@* @page
 @model IndexModel
 @{
     ViewData["Title"] = "Ignitis Testinė Užduotis";
@@ -43,3 +43,80 @@
     </div>
 </body>
 </html>
+ *@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Ignitis Testinė Užduotis";
+}
+
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="/css/start_style.css">
+    <script src="/js/script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <svg viewBox="0 0 24 24">
+                <rect fill="#0044cc" x="2" y="2" width="6" height="6" />
+                <rect fill="#0044cc" x="10" y="2" width="6" height="6" />
+                <rect fill="#0044cc" x="2" y="10" width="6" height="6" />
+                <rect fill="#0044cc" x="10" y="10" width="6" height="6" />
+            </svg>
+            <span>Ignitis testinė užduotis</span>
+        </div>
+        <div class="header-right">
+            
+            <a href="#" class="search-icon">
+                <svg viewBox="0 0 24 24">
+                    <path fill="#666" d="M15.5 14h-.79l-.28-.27c1.19-1.39 1.89-3.19 1.89-5.13 0-4.41-3.59-8-8-8s-8 3.59-8 8 3.59 8 8 8c1.94 0 3.74-.7 5.13-1.89l.27-.28v.79l5 5 1.49-1.49-5-5zm-6.5 0c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z" />
+                </svg>
+            </a>
+            <a href="#" class="signin">Sign in</a>
+        </div>
+    </div>
+    <div class="icon-container">
+        <a href="#" class="view-icon" onclick="toggleBlockPosition('small'); return false;">
+            <svg viewBox="0 0 24 24">
+                <path fill="#666" d="M4 4h6v6H4V4zm0 7h6v6H4v-6zm7-7h6v6h-6V4zm0 7h6v6h-6v-6z" />
+            </svg>
+        </a>
+        <a href="#" class="large-view-icon" onclick="toggleBlockPosition('large'); return false;">
+            <svg viewBox="0 0 24 24">
+
+                <path fill="#666" d="M4 6h6v6H4V6zm0 7h6v6H4v-6zm7-7h6v6h-6V6zm0 7h6v6h-6v-6zm7-14h-6v6h6V1zm0 14h-6v6h6v-6z" />
+            </svg>
+        </a>
+    </div>
+
+
+    <div class="content">
+        <div id="preview-block" class="preview-container right-align small">
+            <a href="Details">
+                <img id="picture" src="/images/picture.png" alt="Newsletter Preview">
+            </a>
+            <p class="preview-caption">Mėnesinis naujienlaiškis 2024 balandis - be rinkos</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script>
+    function toggleBlockPosition(size) {
+        const previewBlock = document.getElementById("preview-block");
+
+        if (size === "large") {
+            previewBlock.classList.remove("right-align", "small");
+            previewBlock.classList.add("left-align", "large");
+        } else {
+            previewBlock.classList.remove("left-align", "large");
+            previewBlock.classList.add("right-align", "small");
+        }
+    }
+</script>
